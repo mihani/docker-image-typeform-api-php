@@ -1,6 +1,6 @@
 # action.yml
-name: 'Quelity CI'
-description: 'Run phpunit test and phpcs fixer'
+name: 'PHP7.4'
+description: 'Docker image - PHP 7.4'
 runs:
   using: 'docker'
   image: 'Dockerfile'

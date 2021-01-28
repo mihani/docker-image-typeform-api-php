@@ -5,19 +5,14 @@ ENV XDEBUG_VERSION 3.0.2
 ENV COMPOSER_VERSION 2.0.8
 
 RUN apk add --update --no-cache \
-        bash \
         ca-certificates \
         git \
         icu-libs \
         libxml2-dev \
-        unzip \
-        zip \
-        oniguruma-dev \
-        libzip-dev && \
+        oniguruma-dev && \
     apk add --update --no-cache --virtual .build-deps \
         $PHPIZE_DEPS \
         icu-dev && \
-    docker-php-ext-install zip && \
     apk del .build-deps && \
     apk add gosu --update --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ && \
     addgroup bar && \
